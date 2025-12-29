@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  physio-app:
+    build: .
+    container_name: physio-ai-doctor
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped

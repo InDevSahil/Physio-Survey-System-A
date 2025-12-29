@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physio AI Doctor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="app-container">
+        <header>
+            <h1>Dr. Physio AI</h1>
+            <p>Deep Diagnostic Analysis</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <button id="finishBtn" class="finish-btn" style="display:none;" onclick="finishEarly()">Finish & View
+                Report</button>
+        </header>
+
+        <div class="chat-area" id="chatArea">
+            <!-- Messages will appear here -->
+            <div class="message bot">
+                Hello, I am your advanced Physio AI. I will ask you a series of questions to understand your condition
+                perfectly. Let's start.
+            </div>
+        </div>
+
+        <div class="typing-indicator" id="typing">Dr. Physio is thinking...</div>
+
+        <div class="typing-indicator" id="typing">Dr. Physio is thinking...</div>
+
+        <!-- Mode Selection Screen -->
+        <div id="mode-selection" class="controls">
+            <h3>Select Diagnostic Mode</h3>
+            <div class="options-grid">
+                <button class="option-btn" onclick="selectMode('sim')">
+                    <strong>Simulation Mode</strong><br>
+                    <small>Fast • Rule-Based • Offline</small>
+                </button>
+                <button class="option-btn" onclick="selectMode('ai')">
+                    <strong>AI Mode</strong><br>
+                    <small>Smart • Gemini Powered • Requires Key</small>
+                </button>
+            </div>
+        </div>
+
+        <div class="controls" id="controls" style="display:none;">
+            <!-- Dynamic Controls -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
